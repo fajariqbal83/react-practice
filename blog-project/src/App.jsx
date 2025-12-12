@@ -1,15 +1,16 @@
 import axios from "axios";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Posts from "./components/Posts";
 
 const App = () => {
   const [data, setData] = useState([]);
 
   const apiData = async () => {
     const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/users"
+      "https://wordpress-1471720-5962383.cloudwaysapps.com/wp-json/custom/v1/blog/"
     );
-    setData(response.data);
+
+    setData(response.data.posts);
   };
 
   useEffect(() => {
@@ -18,10 +19,7 @@ const App = () => {
 
   return (
     <div>
-      {console.log(data)}
-      {data.map((post) => (
-        <p key={post.id}>{post.name}</p>
-      ))}
+ <Posts data={data} />
     </div>
   );
 };
