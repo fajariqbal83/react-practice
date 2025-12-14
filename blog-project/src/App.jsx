@@ -1,6 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Posts from "./components/Posts";
+import Navbar from "./components/Navbar";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home"
+import Categories from "./Pages/Categories"
+import About from "./Pages/About"
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -19,7 +23,14 @@ const App = () => {
 
   return (
     <div>
- <Posts data={data} />
+      <Navbar />
+     <Routes>
+      <Route path="/" element={<Home data={data}/>}/>
+       <Route path="/categories" element={<Categories/>}/>
+        <Route path="/about" element={<About/>}/>
+     </Routes>
+     
+    
     </div>
   );
 };
