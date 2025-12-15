@@ -1,5 +1,6 @@
 const Home = (props) => {
    const { data } = props;
+   
   return (
     <div>
        <div className="flex flex-wrap gap-5 w-full p-6">
