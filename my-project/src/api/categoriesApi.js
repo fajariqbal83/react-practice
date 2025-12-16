@@ -6,7 +6,3 @@ export const getCategories = async () => {
   return response.data;
 };
 
-export const getPostsByCategory = async (slug) => {
-  const res = await axiosInstance.get("/blog");
-  return res.data.posts;
-};
