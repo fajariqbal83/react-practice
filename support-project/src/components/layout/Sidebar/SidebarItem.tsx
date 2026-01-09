@@ -6,7 +6,7 @@ type SidebarItemProps = {
 const SidebarItem = ({ children, showOnMobile }: SidebarItemProps) => {
   return (
     <div
-      className={`w-14 h-14 flex items-center justify-center rounded-2xl hover:bg-gray-900 cursor-pointer ${
+      className={`w-20 h-20 p-4 flex items-center justify-center rounded-2xl hover:bg-gray-800 cursor-pointer  ${
         showOnMobile ? "" : "hidden lg:flex"
       }`}
     >

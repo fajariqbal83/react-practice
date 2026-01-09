@@ -9,9 +9,9 @@ const Sidebar = () => {
         w-full lg:w-25
         bg-black text-white 
         flex flex-row lg:flex-col
-        lg:justify-between
+        lg:justify-between justify-around
         px-4 py-2 
-        shadow-lg lg:shadow-none lg:my-6
+        shadow-lg lg:shadow-none lg:my-3
       "
     >
       {/* TOP */}

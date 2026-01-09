@@ -1,5 +1,6 @@
 import Navbar from "../../components/layout/Navbar"
 import Sidebar from "../../components/layout/Sidebar/Sidebar"
+import AllTickets from "../TicketsPage/AllTickets"
 
 
 const Dashboard = () => {
@@ -9,7 +10,7 @@ const Dashboard = () => {
   <div className="flex-1 flex flex-col">
     <Navbar />
     <main className="flex-1 overflow-hidden">
-      {/* page content */}
+    <AllTickets/>
     </main>
   </div>
 </div>
