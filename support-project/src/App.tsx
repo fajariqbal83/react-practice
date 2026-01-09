@@ -1,11 +1,12 @@
-
+import { TicketsProvider } from "./context/TicketContext";
+import AppRouter from "./router/AppRouter";
 
 const App = () => {
   return (
-    <div>
-      app
-    </div>
-  )
-}
+    <TicketsProvider>
+      <AppRouter />
+    </TicketsProvider>
+  );
+};
 
-export default App
+export default App;
