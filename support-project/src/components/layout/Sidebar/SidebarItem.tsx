@@ -1,17 +1,20 @@
-
 type SidebarItemProps = {
   children: React.ReactNode
-  hidden?: boolean
+  showOnMobile?: boolean
 }
 
-const SidebarItem = ({ children, hidden }: SidebarItemProps) => {
+const SidebarItem = ({ children, showOnMobile }: SidebarItemProps) => {
   return (
     <div
       className={`w-14 h-14 flex items-center justify-center rounded-2xl hover:bg-gray-900 cursor-pointer ${
-        hidden ? "hidden" : ""
+        showOnMobile ? "" : "hidden lg:flex"
       }`}
     >
       {children}
     </div>
   )
 }
+
+export default SidebarItem
+
+
