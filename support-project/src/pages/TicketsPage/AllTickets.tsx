@@ -1,9 +1,10 @@
-import TicketSidebar from "../../tickets/TicketSidebar"
+import TicketsSidebar from "../../components/TicketsSidebar"
+
 
 const AllTickets = () => {
   return (
-    <div className="bg-white h-full mx-5 rounded-3xl">
-     <TicketSidebar/>
+    <div className="bg-white h-full mx-5 pb-2 rounded-3xl">
+    <TicketsSidebar/>
      </div>
     
   )
