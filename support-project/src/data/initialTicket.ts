@@ -1,26 +1,38 @@
 export const initialTickets = [
   {
     id: "1",
+    requester: "HelpDesk",
+    requestermail: "support@helpdesk.com",
     title: "Welcome to HelpDesk! See the next steps",
-    status:"Open",
-    agent:"unassigned"
+    status: "Open",
+    agent: "unassigned",
+    date: "17 Dec 2025",
   },
   {
     id: "2",
+    requester: "HelpDesk",
+    requestermail: "support@helpdesk.com",
     title: "Work together with your team",
-    status:"Open",
-    agent:"unassigned"
+    status: "Open",
+    agent: "unassigned",
+    date: "17 Dec 2025",
   },
   {
     id: "3",
+    requester: "HelpDesk",
+    requestermail: "support@helpdesk.com",
     title: "Learn how to solve tickets effectively",
-    status:"Open",
-    agent:"unassigned"
+    status: "Open",
+    agent: "unassigned",
+    date: "17 Dec 2025",
   },
-   {
+  {
     id: "4",
+    requester: "HelpDesk",
+    requestermail: "support@helpdesk.com",
     title: "Set up your domain",
-    status:"Open",
-    agent:"unassigned"
-  }
+    status: "Open",
+    agent: "unassigned",
+    date: "17 Dec 2025",
+  },
 ];

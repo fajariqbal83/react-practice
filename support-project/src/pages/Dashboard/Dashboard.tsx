@@ -9,7 +9,7 @@ const Dashboard = () => {
   <Sidebar />
   <div className="flex-1 flex flex-col">
     <Navbar />
-    <main className="flex-1 overflow-hidden">
+    <main className="flex-1 overflow-auto">
     <AllTickets/>
     </main>
   </div>

@@ -6,12 +6,12 @@ import PowerIcon from "./SidebarIcons/PowerIcon";
 import SettingIcon from "./SidebarIcons/SettingIcon";
 import TicketsIcon from "./SidebarIcons/TicketsIcon";
 import SupportLogo from "./SidebarIcons/SupportLogo";
-import type { SidebarItemData } from "./SidebarData.type";
+import type { SidebarItemData } from "../../../types/SidebarData.type";
 import ProfileIcon from "./SidebarIcons/ProfileIcon";
 
 export const TOP_ITEMS: SidebarItemData[] = [
   { icon: <SupportLogo />, showOnMobile: false },
-  { icon: <TicketsIcon />, showOnMobile: true },
+  { icon: <TicketsIcon />,    route: "/", showOnMobile: true },
   { icon: <AgentIcon />, showOnMobile: true },
   { icon: <AnalyticsIcon />, showOnMobile: false },
   { icon: <PowerIcon />, showOnMobile: false },

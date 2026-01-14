@@ -1,7 +1,7 @@
 import type { SidebarTicketItem } from "../types/ticketsidebar.types";
 
 export const TICKETS: SidebarTicketItem[] = [
-  { id: "recent-tickets", label: "All recent tickets" },
+  { id: "recent-tickets",  route: "/", label: "All recent tickets" },
   { id: "handle-tickets", label: "Tickets to handle", count: 4 },
   { id: "open-tickets", label: "My open tickets", count: 0 },
 ];
