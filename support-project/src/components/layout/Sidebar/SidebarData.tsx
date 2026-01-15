@@ -11,7 +11,7 @@ import ProfileIcon from "./SidebarIcons/ProfileIcon";
 
 export const TOP_ITEMS: SidebarItemData[] = [
   { icon: <SupportLogo />, showOnMobile: false },
-  { icon: <TicketsIcon />,    route: "/", showOnMobile: true },
+  { icon: <TicketsIcon />,    route: "/tickets", showOnMobile: true },
   { icon: <AgentIcon />, showOnMobile: true },
   { icon: <AnalyticsIcon />, showOnMobile: false },
   { icon: <PowerIcon />, showOnMobile: false },

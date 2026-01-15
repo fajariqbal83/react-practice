@@ -3,14 +3,16 @@ import { Search } from "lucide-react";
 import { FOLDERS, STATUSES, TICKETS, VIEWS } from "../data/ticketSidebar";
 import SidebarRow from "./SidebarRow";
 import { Info, Plus } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const TicketsSidebar = () => {
   const [activeId, setActiveId] = useState("open");
+ const navigate = useNavigate();
   return (
     <aside className="w-130 h-full border-r border-gray-300 flex flex-col ">
       <div className="flex justify-between shrink-0 items-center py-6 px-8 border-b border-gray-300">
         <div className="text-4xl font-semibold">Tickets</div>
-        <button className="bg-blue-700 text-white text-3xl font-semibold py-4 px-7 rounded-2xl flex flex-row gap-2 items-center">
+        <button onClick={() => navigate("/tickets/new")} className="bg-blue-700 text-white text-3xl font-semibold py-4 px-7 rounded-2xl flex flex-row gap-2 items-center">
           <Plus size={35} strokeWidth={2} /> <span>New ticket</span>
         </button>
       </div>
