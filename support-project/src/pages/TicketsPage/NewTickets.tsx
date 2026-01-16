@@ -29,7 +29,7 @@ const NewTickets = () => {
           ))}
         </div>
 
-        <div className="flex flex-row gap-3 items-center mt-9">
+        <div className="flex flex-row gap-3 items-center my-9">
           <div>
             <Plus size={28} color="#3287f5" strokeWidth={3} />
           </div>
@@ -38,6 +38,10 @@ const NewTickets = () => {
           <div>
             <Info size={27} />
           </div>
+        </div>
+
+        <div>
+          Team
         </div>
       </div>
     </div>

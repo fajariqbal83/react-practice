@@ -1,4 +1,4 @@
-import AllRecentTickets from "../../tickets/AllRecentTickets";
+import AllRecentTickets from "../../components/pagecomponents/teams/tickets/AllRecentTickets";
 import TicketsSidebar from "../../ticketSidebar/TicketsSidebar";
 
 const AllTickets = () => {
