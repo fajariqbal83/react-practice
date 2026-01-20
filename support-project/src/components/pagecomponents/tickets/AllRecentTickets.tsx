@@ -1,6 +1,6 @@
 import { Plus } from "lucide-react";
 import { useState } from "react";
-import { initialTickets } from "../data/initialTicket";
+import { initialTickets } from "../../../data/initialTicket";
 import TicketsRecent from "./TicketsRecent";
 import TicketsHeader from "./TicketsHeader";
 const AllRecentTickets = () => {
