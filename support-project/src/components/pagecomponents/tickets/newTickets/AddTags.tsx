@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { TAGS } from "../../../data/newTicketTags";
+import { TAGS } from "../../../../data/newTicketTags";
 
 const AddTags = () => {
   const [isOpen, setIsOpen] = useState(false);
