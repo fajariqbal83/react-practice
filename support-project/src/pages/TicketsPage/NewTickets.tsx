@@ -1,7 +1,7 @@
-import AddTags from "../../components/pagecomponents/tickets/AddTags";
-import NewTicketDropdowns from "../../components/pagecomponents/tickets/NewTicketDropdowns";
-import NewTicketsInfo from "../../components/pagecomponents/tickets/NewTicketsInfo";
-import NewMessageBox from "../../components/pagecomponents/tickets/NewMessageBox"
+import AddTags from "../../components/pagecomponents/tickets/newTickets/AddTags";
+import NewTicketDropdowns from "../../components/pagecomponents/tickets/newTickets/NewTicketDropdowns";
+import NewTicketsInfo from "../../components/pagecomponents/tickets/newTickets/NewTicketsInfo";
+import NewMessageBox from "../../components/pagecomponents/tickets/newTickets/NewMessageBox"
 import { dropdowns } from "../../data/dropdowns";
 
 

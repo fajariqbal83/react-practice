@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { initialTickets } from "../../../data/initialTicket";
+import { initialTickets } from "../../../../data/initialTicket";
 import TicketsRow from "./TicketsRow";
-import type { Ticket } from "../../../types/ticket.types";
+import type { Ticket } from "../../../../types/ticket.types";
 
 const TicketsRecent = () => {
   const [recentTickets] = useState<Ticket[]>(initialTickets);

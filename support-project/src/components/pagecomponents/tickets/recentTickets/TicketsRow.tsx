@@ -1,4 +1,4 @@
-import type { Ticket } from "../../../types/ticket.types";
+import type { Ticket } from "../../../../types/ticket.types";
 import { Dot, Ellipsis } from "lucide-react";
 
 interface TicketsRowProps {

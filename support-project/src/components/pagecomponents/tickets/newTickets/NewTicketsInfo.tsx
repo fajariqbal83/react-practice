@@ -1,14 +1,14 @@
 import { MoveLeft } from "lucide-react";
-import { ticketFields } from "../../../data/ticketsFields";
+import { ticketFields } from "../../../../data/ticketsFields";
 import { Plus, Info } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const NewTicketsInfo = () => {
   const navigate = useNavigate();
   return (
-    <div onClick={() => navigate(-1)} className="cursor-pointer">
+    <div className="cursor-pointer">
       <div className="flex flex-row gap-6 items-center p-8 border-b border-gray-300">
-        <div>
+        <div onClick={() => navigate(-1)}>
           <MoveLeft size={28} strokeWidth={3} color="#0a0a0a" />
         </div>
         <div className="text-4xl font-medium"> New ticket</div>

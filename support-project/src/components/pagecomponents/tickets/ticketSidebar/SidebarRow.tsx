@@ -1,4 +1,4 @@
-import type { SidebarTicketItem } from "../types/ticketsidebar.types";
+import type { SidebarTicketItem } from "../../../../types/ticketsidebar.types";
 
 interface Props {
   item: SidebarTicketItem;

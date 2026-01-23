@@ -1,0 +1,33 @@
+import {
+  User,
+  ClipboardList,
+  Paperclip,
+  Calendar,
+  Users,
+  Languages,
+  Activity,
+  Mail,
+  ArrowUp,
+  Star,
+  Folder,
+  CheckCircle,
+  Tag,
+  UsersRound,
+} from "lucide-react";
+
+export const filters = [
+  { label: "Agent", icon: User },
+  { label: "Assignment", icon: ClipboardList },
+  { label: "Attachments", icon: Paperclip },
+  { label: "Creation date", icon: Calendar },
+  { label: "Followers", icon: Users },
+  { label: "Language", icon: Languages },
+  { label: "Last activity", icon: Activity },
+  { label: "Last message", icon: Mail },
+  { label: "Priority", icon: ArrowUp },
+  { label: "Rating", icon: Star },
+  { label: "Source", icon: Folder },
+  { label: "Status", icon: CheckCircle },
+  { label: "Tag", icon: Tag },
+  { label: "Team", icon: UsersRound },
+];

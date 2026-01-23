@@ -1,5 +1,5 @@
-import AllRecentTickets from "../../components/pagecomponents/tickets/AllRecentTickets";
-import TicketsSidebar from "../../ticketSidebar/TicketsSidebar";
+import AllRecentTickets from "../../components/pagecomponents/tickets/recentTickets/AllRecentTickets";
+import TicketsSidebar from "../../components/pagecomponents/tickets/ticketSidebar/TicketsSidebar";
 
 const AllTickets = () => {
   return (

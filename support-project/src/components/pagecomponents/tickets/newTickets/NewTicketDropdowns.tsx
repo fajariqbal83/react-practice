@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { Dropdowns } from "../../../types/dropdowns.types";
+import type { Dropdowns } from "../../../../types/dropdowns.types";
 import { ChevronDown, Check, UserRound } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
