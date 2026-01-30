@@ -7,6 +7,8 @@ export const initialTickets = [
     status: "Open",
     agent: "unassigned",
     date: "17 Dec 2025",
+    day: "Wed",
+    time:"10:01 PM",
   },
   {
     id: "2",
@@ -16,6 +18,8 @@ export const initialTickets = [
     status: "Open",
     agent: "unassigned",
     date: "17 Dec 2025",
+    day: "Wed",
+    time:"10:01 PM",
   },
   {
     id: "3",
@@ -25,6 +29,8 @@ export const initialTickets = [
     status: "Open",
     agent: "unassigned",
     date: "17 Dec 2025",
+    day: "Wed",
+    time:"10:01 PM",
   },
   {
     id: "4",
@@ -34,5 +40,7 @@ export const initialTickets = [
     status: "Open",
     agent: "unassigned",
     date: "17 Dec 2025",
+    day: "Wed",
+    time:"10:01 PM",
   },
 ];

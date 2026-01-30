@@ -6,4 +6,6 @@ export interface Ticket {
   status: string;
   agent: string;
   date: string;
+  day: string;
+  time: string;
 }
