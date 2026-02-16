@@ -28,7 +28,7 @@ const DetailsHeader = ({ ticket }: DetailsHeaderProps) => {
           <ArrowLeft size={30} strokeWidth={2.25} />
         </div>
         <div className="text-4xl font-semibold flex items-center gap-3">
-          <div>Step {ticket.id}:</div>
+          <div>Step {ticket.step}:</div>
           <div>{ticket.title}</div>
         </div>
         <div>

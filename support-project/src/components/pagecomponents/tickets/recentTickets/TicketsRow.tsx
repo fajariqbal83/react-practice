@@ -32,7 +32,7 @@ const TicketsRow = ({ ticket }: TicketsRowProps) => {
         </div>
         <div className="flex flex-row ">
           <div className="text-1xl font-medium text-gray-700">
-            Step {ticket.id}:
+            Step {ticket.step}:
           </div>
           <div
             className="text-1xl font-medium text-gray-700 truncate max-w-35

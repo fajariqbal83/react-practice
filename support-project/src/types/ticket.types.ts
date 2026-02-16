@@ -1,5 +1,6 @@
 export interface Ticket {
   id: string;
+  step:string;
   requester: string;
   requestermail: string;
   title: string;
@@ -8,4 +9,5 @@ export interface Ticket {
   date: string;
   day: string;
   time: string;
+  messages: string[];
 }
