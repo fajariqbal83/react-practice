@@ -8,8 +8,7 @@ export const initialTicketDetails = [
     priority: ["Low", "Medium", "High", "Urgent"],
     source: "API",
     language: "English",
-    tags: "No suggested tags found",
-    addtag: "+ Add tag",
+    tags: ["Refund", "Urgent", "VIP"],
     custom: [
       "No custom fields yet",
       "Create your first custom field to add more useful details to your tickets.",
@@ -31,8 +30,7 @@ export const initialTicketDetails = [
     priority: ["Low", "Medium", "High", "Urgent"],
     source: "API",
     language: "English",
-    tags: "+ support",
-    addtag: "+ Add tag",
+    tags: ["Refund", "Urgent",  "VIP"],
     custom: [
       "No custom fields yet",
       "Create your first custom field to add more useful details to your tickets.",
@@ -54,8 +52,7 @@ export const initialTicketDetails = [
     priority: ["Low", "Medium", "High", "Urgent"],
     source: "API",
     language: "English",
-    tags: "+ sales",
-    addtag: "+ Add tag",
+   tags: ["Refund", "Urgent", "VIP"],
     custom: [
       "No custom fields yet",
       "Create your first custom field to add more useful details to your tickets.",
@@ -77,8 +74,7 @@ export const initialTicketDetails = [
     priority: ["Low", "Medium", "High", "Urgent"],
     source: "API",
     language: "English",
-    tags: "+ sales",
-    addtag: "+ Add tag",
+   tags: ["Refund", "Urgent", "VIP"],
     custom: [
       "No custom fields yet",
       "Create your first custom field to add more useful details to your tickets.",

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, Link, CircleAlert } from "lucide-react";
-import type { initialTicketDetails } from "../../../../../types/ticketsDetails";
+import type { initialTicketDetails } from "../../../../../../types/ticketsDetails";
 
 const TicketInfo = ({ ticket }: { ticket: initialTicketDetails }) => {
   const [isOpen, setIsOpen] = useState(false);

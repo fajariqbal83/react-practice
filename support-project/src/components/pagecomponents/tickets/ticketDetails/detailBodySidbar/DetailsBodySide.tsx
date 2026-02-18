@@ -2,7 +2,9 @@ import { useParams } from "react-router-dom";
 import { initialTicketDetails } from "../../../../../data/initialTicketDetails";
 import { Ellipsis } from "lucide-react";
 
-import TicketInfo from "./TicketInfo";
+import TicketInfo from "./detailBComponents/TicketInfo";
+import TicketAddTags from "./detailBComponents/TicketAddTags";
+import CustomFields from "./detailBComponents/CustomFields";
 const DetailsBodySide = () => {
   
   const { id } = useParams();
@@ -22,6 +24,8 @@ const DetailsBodySide = () => {
         </div>
       </div>
     <TicketInfo key={ticket.id} ticket={ticket}/>
+    <TicketAddTags />
+    <CustomFields key={ticket.id} ticket={ticket}/>
     </div>
   );
 };

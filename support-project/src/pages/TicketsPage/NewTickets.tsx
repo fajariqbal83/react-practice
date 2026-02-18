@@ -22,7 +22,7 @@ const NewTickets = () => {
         </div>
       </div>
 
-      <div>
+      <div className="px-[20%] my-8">
         <AddTags/>
       </div>
 

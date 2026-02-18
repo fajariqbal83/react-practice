@@ -13,7 +13,7 @@ const AddTags = () => {
   );
 
   return (
-    <div className="px-[20%] my-8">
+    <div>
       <div className="relative w-80">
         {!isSearchMode && (
           <button
