@@ -1,34 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import { fetchProducts } from "./Api/productApi";
+import type { Product } from "./Types/products";
 
-function App() {
-  const [count, setCount] = useState(0)
 
+const App = () => {
+    const [products, setProducts] = useState<Product[]>([]);
+   
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    fetchProducts()
+      .then((data) => {
+        console.log("API Data (inside component):", data); 
+        setProducts(data);
+      })
+      .catch((err) => {
+        console.error("API Error:", err);
+        setError("API call fail ho gayi");
+      });
+  }, []);
+  
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+         <h2>Products</h2>
+
+      
+      {error && <p style={{ color: "red" }}>{error}</p>}
+
+    
+      {products.map((item) => (
+        <div key={item.id}>
+          <p>{item.title}</p>
+          <p>Rs: {item.price}</p>
+        </div>
+      ))}
+    </div>
   )
 }
 
