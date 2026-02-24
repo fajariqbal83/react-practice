@@ -1,5 +1,5 @@
 import { http } from "./http";
-import type { User } from "../types/user";
+import type { User, CreateUser } from "../types/user";
 
 
 export const getAllUsers = () =>
@@ -10,7 +10,7 @@ export const getSingleUser = (id: number) =>
   http<User>(`/users/${id}`);
 
 
-export const addUser = (user: User) =>
+export const addUser = (user: CreateUser) =>
   http<User>("/users", {
     method: "POST",
     body: user,

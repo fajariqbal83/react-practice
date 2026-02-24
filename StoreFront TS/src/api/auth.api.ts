@@ -1,7 +1,9 @@
 import { http } from "./http";
-import type { LoginResponse } from "../types/auth";
 
-// FakeStore login: username + password → token
+interface LoginResponse {
+  token: string;
+}
+
 export const loginApi = (username: string, password: string) =>
   http<LoginResponse>("/auth/login", {
     method: "POST",
