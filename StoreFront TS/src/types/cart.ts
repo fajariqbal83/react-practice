@@ -1,14 +1,14 @@
+export interface CartItem {
+  productId: number;
+  quantity: number;
+}
+
 export interface Cart {
   id: number;
   userId: number;
-  products: [
-    {
-      id: number;
-      title: string;
-      price: number;
-      description: string;
-      category: string;
-      image: string;
-    },
-  ];
+  date: string;
+  products: CartItem[];
 }
+
+
+export type CreateCart = Omit<Cart, "id">;

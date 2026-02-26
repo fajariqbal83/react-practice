@@ -1,5 +1,5 @@
 import { http } from "./http";
-import type { Cart } from "../types/cart";
+import type { Cart,  CreateCart  } from "../types/cart";
 
 export const getAllCarts = () =>
   http<Cart[]>("/carts");
@@ -9,7 +9,7 @@ export const getSingleCart = (id: number) =>
   http<Cart>(`/carts/${id}`);
 
 
-export const addCart = (cart: Cart) =>
+export const addCart = (cart:  CreateCart ) =>
   http<Cart>("/carts", {
     method: "POST",
     body: cart,

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAllProducts } from "../api/product.api";
+import { getAllCarts, updateCart, addCart } from "../api/cart.api";
 import type { product } from "../types/product";
 import { Heart } from "lucide-react";
 import { getToken } from "../utils/auth";
@@ -7,26 +8,55 @@ import { useNavigate } from "react-router-dom";
 
 const ProductCard = () => {
   const [products, setProducts] = useState<product[]>([]);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   useEffect(() => {
     getAllProducts()
       .then((data) => {
         console.log("API products:", data);
+        if (data.length === 0) console.warn("No products returned from API!");
         setProducts(data);
       })
-      .catch((err) => console.error(err));
+      .catch((err) => console.error("Error fetching products:", err));
   }, []);
 
-const handleAddToCart = (p: product) => {
+const handleAddToCart = async (p: product) => {
   const token = getToken();
+  if (!token) return navigate("/login");
 
-  if (!token) {
-    navigate("/login"); 
-    return;
+  try {
+    const carts = await getAllCarts();
+    let myCart = carts.find(c => c.userId === 1); 
+    if (!myCart) {
+     
+      const newCart = {
+        userId: 1,
+        date: new Date().toISOString(),
+        products: [{ productId: p.id, quantity: 1 }],
+      };
+      await addCart(newCart);
+      console.log("New cart created and product added!");
+    } else {
+      const existing = myCart.products.find(x => x.productId === p.id);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        myCart.products.push({ productId: p.id, quantity: 1 });
+      }
+
+      await updateCart(myCart.id, {
+        ...myCart,
+        date: new Date().toISOString(),
+      });
+      console.log("Existing cart updated!");
+    }
+
+    localStorage.setItem("cartUpdated", JSON.stringify(true));
+    navigate("/cart");
+  } catch (err) {
+    console.error("Add to cart error:", err);
+    alert("Cart me add karne me masla hua!");
   }
-
-  console.log("Added to cart", p.id); 
 };
 
   return (
@@ -67,7 +97,7 @@ const handleAddToCart = (p: product) => {
 
               <button
                 onClick={() => handleAddToCart(p)}
-                className="bg-indigo-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-indigo-700 transition"
+                className="bg-indigo-600 text-white px-6 py-3 cursor-pointer rounded-xl font-medium hover:bg-indigo-700 transition"
               >
                 Add to cart
               </button>

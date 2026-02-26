@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { addUser } from "../../api/user.api";
+import { addUser, getAllUsers } from "../../api/user.api";
 import { useNavigate } from "react-router-dom";
 import { Camera } from "lucide-react";
 
@@ -23,17 +23,29 @@ const Register = () => {
     }
 
     try {
+      const users = await getAllUsers();
+
+      const alreadyExist = users.find(
+        (u) => u.username === username || u.email === email
+      );
+
+      if (alreadyExist) {
+        setError("User already exists.");
+        return;
+      }
+
       await addUser({ username, email, password });
-      navigate("/login"); 
+
+      navigate("/login");
     } catch (err) {
-      setError("User already exists or API error.");
+      setError("API error. Try again.");
     }
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-indigo-600">
       <div className="w-110 rounded-3xl bg-white backdrop-blur-md shadow-2xl p-6">
-        
+
         <div className="flex justify-center -mt-12 mb-4">
           <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg">
             <Camera size={48} />

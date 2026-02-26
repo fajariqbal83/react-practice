@@ -10,17 +10,25 @@ const Login = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async () => {
-    try {
-      const res = await loginApi(username, password);
-      console.log("LOGIN RESPONSE:", res);
-      saveToken(res.token);
-      navigate("/");
-    } catch (err) {
-      setError("User not found. Please register first.");
-    }
-  };
+ const handleLogin = async () => {
+  try {
+    const res = await loginApi(username, password);
+    console.log("LOGIN RESPONSE:", res);
+    saveToken(res.token);
 
+    
+    const pending = localStorage.getItem("pendingCartProduct");
+    if (pending) {
+      const { productId, quantity } = JSON.parse(pending);
+ console.log("Auto added after login:", productId, quantity);
+      localStorage.removeItem("pendingCartProduct");
+    }
+
+    navigate("/cart"); 
+  } catch (err) {
+    setError("User not found. Please register first.");
+  }
+};
   return (
     <div className="min-h-screen flex items-center justify-center bg-indigo-700 from-gray-900 to-gray-800">
       <div className="bg-gray-900 p-10 rounded-3xl shadow-xl w-full max-w-md">
